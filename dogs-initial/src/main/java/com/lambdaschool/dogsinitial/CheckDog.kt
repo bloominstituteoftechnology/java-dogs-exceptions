@@ -1,5 +1,7 @@
 package com.lambdaschool.dogsinitial
 
+import com.lambdaschool.dogsinitial.Model.Dog
+
 interface CheckDog {
     fun test(d: Dog): Boolean
 
