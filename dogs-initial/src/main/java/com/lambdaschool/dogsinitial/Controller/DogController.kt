@@ -47,5 +47,11 @@ class DogController {
         return mav
     }
 
+    @GetMapping(value = ["/breedtable/apartments"])
+    fun getDogsForApartments():ModelAndView{
+        val mav: ModelAndView = ModelAndView("dogsForApartments")
+        mav.addObject("dogList", DogsinitialApplication.getOurDogList().dogList.filter { dog -> dog.isApartmentSuitable })
 
+        return mav
+    }
 }
