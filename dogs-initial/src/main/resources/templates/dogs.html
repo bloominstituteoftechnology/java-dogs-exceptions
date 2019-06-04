@@ -13,7 +13,7 @@
     <tr th:each="Dog : ${dogList}">
         <td th:text="${Dog.breed}">Breed</td>
         <td th:text="${Dog.weight}">Weight</td>
-        <td th:text="${Dog.isApartmentSuitable}">isApartmentSuitable</td>
+        <td th:text="${Dog.isApartmentSuitable()}">isApartmentSuitable</td>
     </tr>
 </table>
 <strong><a href="/">Click here to go back</a></strong>
