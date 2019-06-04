@@ -47,6 +47,7 @@ class RestExceptionHandler: ResponseEntityExceptionHandler(){
         return ResponseEntity(errorDetail, null, HttpStatus.BAD_REQUEST)
     }
 
+
     override fun handleNoHandlerFoundException(ex: NoHandlerFoundException, headers: HttpHeaders, status: HttpStatus, request: WebRequest): ResponseEntity<Any> {
         val errorDetail = ErrorDetail(ex.requestURL,
                 HttpStatus.NOT_FOUND.value(),
@@ -56,4 +57,6 @@ class RestExceptionHandler: ResponseEntityExceptionHandler(){
 
         return ResponseEntity(errorDetail, null, HttpStatus.NOT_FOUND)
     }
+
+
 }
