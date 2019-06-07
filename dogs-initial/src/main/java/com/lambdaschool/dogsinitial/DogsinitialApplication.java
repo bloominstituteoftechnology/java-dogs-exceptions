@@ -7,8 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DogsinitialApplication
 {
 
-    static DogList ourDogList;
-    public static void main(String[] args)
+    public static DogList ourDogList;
+    public static <ourDogList> void main(String[] args)
     {
         ourDogList = new DogList();
         SpringApplication.run(DogsinitialApplication.class, args);
